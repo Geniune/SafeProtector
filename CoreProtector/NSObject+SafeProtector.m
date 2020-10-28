@@ -44,7 +44,10 @@ static  LSSafeProtectorBlock lsSafeProtectorBlock;
     }
 
     DebugLog(@"%@", fullMessage);
-//    assert(NO&&"检测到崩溃，详情请查看上面信息");
+    assert(NO&&"检测到崩溃，详情请查看上面信息");
+    
+    //这里可以将NSException写入log文件或上传至Bugly等平台，具体如何选择请自行实现
+    
 }
 
 #pragma mark -   获取堆栈主要崩溃精简化的信息<根据正则表达式匹配出来

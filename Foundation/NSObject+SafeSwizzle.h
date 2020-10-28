@@ -15,5 +15,12 @@
 //+ (BOOL)swizzleSelector:(SEL)originalSelector withSwizzledSelector:(SEL)swizzledSelector;
 + (BOOL)exchangeInstance:(Class)class selector:(SEL)originalSelector withSwizzledSelector: (SEL)swizzledSelector;
 
+
++ (BOOL)swizzleClassMethod:(SEL)originalSelector withClassMethod:(SEL)swizzledSelector error:(NSError**)error;
++ (BOOL)swizzleMethod:(SEL)originalSelector withSwizzledSelector:(SEL)swizzledSelector error:(NSError**)error;
+
++ (NSInvocation*)swizzleMethod:(SEL)originalSelector withBlock:(id)block error:(NSError**)error;
++ (NSInvocation*)swizzleClassMethod:(SEL)originalSelector withBlock:(id)block error:(NSError**)error;
+
 @end
 

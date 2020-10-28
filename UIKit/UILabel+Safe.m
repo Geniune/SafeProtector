@@ -16,14 +16,13 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
 
-//         [self exchangeInstance:[UILabel class] selector:@selector(setText:) withSwizzledSelector:@selector(safe_setText:)];
+         [self exchangeInstance:[UILabel class] selector:@selector(setText:) withSwizzledSelector:@selector(safe_setText:)];
     });
 }
 
 - (void)safe_setText:(NSString *)text{
     
     if(!text){
-        
         text = @"";
     }
     
